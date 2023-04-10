@@ -89,7 +89,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/Deyb12" target="_blank">DAVE FAGARITA</a></p>
+<p>Built with ❤ by <a style='display: block; text-align: center;' href="https://github.com/Deyb12" target="_blank">DAVE FAGARITA</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
