@@ -53,15 +53,15 @@ if input_string:
         st.session_state.poem = poem
     else:
         poem = st.session_state.poem
+    poem_with_linebreaks = poem.replace('\n', '<br>')
     st.markdown(f"""
-    <div style='border: 1px solid black; padding: 10px;'>
-        <div style='display: flex; justify-content: center;'>
-            <img src='{image}' width=300>
+        <div style='border: 1px solid black; padding: 10px;'>
+            <div style='display: flex; justify-content: center;'>
+                <img src='{image}' width=300>
+            </div>
+            <p style='text-align: center; font-size: 18px; font-family: Monotype Baskerville; margin-top: 20px;'>{poem_with_linebreaks}</p>
         </div>
-        <p font-size: 18px; font-family: Monotype Baskerville; margin-top: 20px;'>{poem}</p>
-       </div>
-     
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     
 
