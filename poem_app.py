@@ -58,9 +58,9 @@ if input_string:
         <div style='display: flex; justify-content: center;'>
             <img src='{image}' width=300>
         </div>
+        <p font-size: 18px; font-family: Monotype Baskerville; margin-top: 20px;'>{poem}</p>
        </div>
-     <p style='text-align: center; font-size: 18px; font-family: Monotype Baskerville; margin-top: 20px;'>{poem}</p>
-    
+     
 """, unsafe_allow_html=True)
     
     
