@@ -32,7 +32,7 @@ gif_url = "https://thumbs.gfycat.com/TenseIncomparableAfricanfisheagle-size_rest
 with st.columns(3)[1]:
     st.image(gif_url, width=250)
 st.markdown("<h1 style='font-size: 42px; font-family: Courier New;'>Welcome to the <span style='color: #D4AF37;'>AI Poet</span>!</h1><p style = 'font-size: 18px;'>Please enter a few words that best describe how you envision your poem to look and sound. Once you have provided the information, you can press enter button in your keyboard to generate your poem instantly.</p><br>", unsafe_allow_html=True)
-input_string = st.text_input("Enter a topic for your poem and image:")
+input_string = st.text_input("Enter a topic for your poem and image:", placeholder="Type here and enter directly. In mobile, just release to enter the input...")
 
 if input_string:
     st.subheader("Generated Poem with Image:")
