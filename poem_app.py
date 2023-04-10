@@ -39,18 +39,21 @@ if input_string:
     
     if "input_string" not in st.session_state or st.session_state.input_string != input_string:
         st.session_state.input_string = input_string
-        st.session_state.image = generate_image(input_string)
-        st.session_state.poem = generate_poem(input_string)
+        with st.spinner("Generating..."):
+            st.session_state.image = generate_image(input_string)
+            st.session_state.poem = generate_poem(input_string)
     
     if st.button("Regenerate Image"):
-        image = generate_image(input_string)
-        st.session_state.image = image
+        with st.spinner("Regenerating image..."):
+            image = generate_image(input_string)
+            st.session_state.image = image
     else:
         image = st.session_state.image
     
     if st.button("Regenerate Poem"):
-        poem = generate_poem(input_string)
-        st.session_state.poem = poem
+        with st.spinner("Regenerating poem..."):
+            poem = generate_poem(input_string)
+            st.session_state.poem = poem
     else:
         poem = st.session_state.poem
     poem_with_linebreaks = poem.replace('\n', '<br>')
